@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="module" src="https://unpkg.com/@assister/chat@latest/dist/chat/chat.esm.js"></script>
+    <link href="https://unpkg.com/@assister/chat@latest/dist/chat/chat.css" rel="stylesheet">
+    <style>
+      :root {
+        /* --message-incoming-color: yellow; */
+      }
+    </style>
+    <script>
+     
+      const wait = () => new Promise(resolve => setTimeout(resolve, 500));
+      window.onload = () => {
+        const fab = document.getElementById('fab');
+        document.getElementById('close').addEventListener('click', () => fab.close());
+        const pane = document.getElementById('pane');
+        function handleIncomingMessage(event) {
+          const message = event.detail;
+          console.log(message.text);
+          loadDoc(message.text);
+          wait()
+            .then(() => message.state = 'delivered')
+            .then(wait)
+            .then(() => message.state = 'read')
+            .then(wait)
+            .then(() => pane.addIncomingMessage(printer()));
+        }
+        pane.addEventListener('incoming', handleIncomingMessage);
+      }
+    </script>
+    <meta charset="UTF-8">
+    <title>Welcome to NIT Trichy</title>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body id="home">
+<!-- Start Your Body Code From here -->
+<div class="wrapper">
+    <!-- header starts here -->
+    <header id="header" class="">
+        <!-- header -->
+        <div class="header-wrapper">
+            <div class="header-container">
+                <div>
+                    <div class="logo-name">
+                        <div class="name">
+                            <a href="index.html" title="">
+                                <h5>National Institute of Technology</h5>
+                                <h5 class="primary-color">Tiruchirappalli</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-links">
+                    <a href="#" data-toggle="popover" title="Address"
+                       data-content="Trichy-Thanjavur Highway, Near BHEL, Trichy,Tamil Nadu - 620015"
+                       data-placement="bottom"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i></a>
+
+                    <a href="#" data-toggle="popover" title="Phone No." data-content="+91-79-29750281"
+                       data-placement="bottom"><i class="fa fa-phone fa-lg" aria-hidden="true"></i></a>
+
+                    <a href="#" data-toggle="popover" title="Email" data-content="help@nitt.edu"
+                       data-placement="bottom"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="navbar navbar-inverse navbar-custom" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Institute <b
+                                        class="caret"></b></a>
+                                <ul class="dropdown-menu multi-level">
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="directors_message.html">Director's Message</a></li>
+                                    <li><a href="deans.html">Deans</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Academics <b
+                                        class="caret"></b></a>
+                                <ul class="dropdown-menu multi-level">
+                                    <li class="dropdown-submenu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">B.Tech</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="btech_cse.html">CSE</a></li>
+                                            <li><a href="btech_ece.html">ECE</a></li>
+                                            <li><a href="btech_eee.html">EEE</a></li>
+                                            <li><a href="btech_ice.html">ICE</a></li>                                            
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">M.Tech</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="mtech_cse.html">CSE</a></li>
+                                            <li><a href="mtech_ece.html">ECE</a></li>
+                                            <li><a href="btech_eee.html">EEE</a></li>
+                                            <li><a href="btech_ice.html">ICE</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="phd.html">Ph.D</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admission<b
+                                        class="caret"></b></a>
+                                <ul class="dropdown-menu multi-level">
+                                    <li><a href="btech_admission.html">B.Tech</a></li>
+                                    <li><a href="mtech_admission.html">M.Tech</a></li>
+                                    <li><a href="phd_admission.html">Ph.D</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Faculty and Research<b class="caret"></b></a>
+                                <ul class="dropdown-menu multi-level">
+                                    <li><a href="faculty.html">Faculty</a></li>
+                                    <li><a href="visiting_faculty.html">Research</a></li>
+                                    <li><a href="staff.html">Labs</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="training_and_placement.html">Training and Placement</a></li>
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- /header -->
+
+    <!-- Announcements, Events, News -->
+    <div class="widgets-wrapper">
+        <div class="widgets-container">
+
+            <!-- Edit this section for important announcements.-->
+            <div class="alert alert-warning text-center">
+                Intra-NITT Hackathon TransfiNITTe V2 results will be declared today!!!
+            </div>
+
+            <!-- Announcements -->
+            <div class="col-sm-4" id="announcements">
+                <div class='announcement-content '>
+                    <div class="widgets-title"><h2>Announcements</h2></div>
+                    <ul id="announcement-list">
+                        <li>
+                            For queries related to <b>B.Tech. programs </b>contact us at: &nbsp; &nbsp; <span
+                                style="font-size: 12px; font-weight: bold;color:Black"><a
+                                href="mailto:admissions@nitt.edu">admissions@nitt.edu</a></span>
+                        </li>
+                        <li>
+                            For admissions to <b>M.Tech. and Ph.D. programs</b> visit:<br><a
+                                href="http://pgadmissions.nitt.edu" target="_blank"> PG-Admission-Portal.</a>
+                        </li>
+                        <li>
+                            Seminar on <b>Wireless Communication </b> to be held on 27-29th February by the ECE Department
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Events -->
+            <div class="col-sm-4" id="events">
+                <div class="events-content">
+                    <div class="widgets-title"><h2>Events</h2></div>
+                    <ul id="events-list">
+                        <li>
+                            <div class="event-container">
+                                <!-- Date -->
+                                <div class="date">
+                                            <span>
+                                                <!-- Day -->
+                                                <div class="day">8</div>
+                                                <!-- Month Short Form (first three letters) -->
+                                                <div class="month">feb</div>
+                                            </span>
+                                </div>
+                                <!-- Event-Description -->
+                                <div class="event-text">Hackathon TransfiNITTe V2 2020</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="event-container">
+                                <!-- Date -->
+                                <div class="date">
+                                            <span>
+                                                <!-- Day -->
+                                                <div class="day">1</div>
+                                                <!-- Month Short Form (first three letters) -->
+                                                <div class="month">feb</div>
+                                            </span>
+                                </div>
+                                <!-- Event-Description -->
+                                <div class="event-text">B Tech Final Year Project- Zeroth Review</div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="event-container">
+                                <!-- Date -->
+                                <div class="date">
+                                            <span>
+                                                <!-- Day -->
+                                                <div class="day">6</div>
+                                                <!-- Month Short Form (first three letters) -->
+                                                <div class="month">jan</div>
+                                            </span>
+                                </div>
+                                <!-- Event-Description -->
+                                <div class="event-text">College Reopens</div>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+            <div class="col-sm-4" id="news">
+                <div class='news-content '>
+                    <div class="widgets-title"><h2>News</h2></div>
+                    <ul id="news-list">
+                        <li>
+                        Anukul Chand, a final year B Tech CSE Student got selected in Google Summer of Code 2020.
+                        </li>
+                        <li>
+                            Qualcomm offers a package of Rs 50 lacs per annum to Jatin Ahuja, a final year B Tech ECE Student.
+                        </li>
+                        <li>
+                            Shakeel Hassan, an NITT Alumnus from the ECE Department is selected as an Astronaut for ISRO's Mars Mission to send human beings to the Red Planet. He will be undergoing Training in Iceland.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-wrapper">
+            <div class="row">
+                <strong>Address : </strong>Trichy-Thanjavur Highway, Near BHEL, Trichy, Tamil Nadu - 620015
+            </div>
+        </div>
+    </footer>
+</div>
+<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/jquery.paginate.min.js "></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/434d359724.js"></script>
+<script src="js/main.js"></script>
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="popover"]').popover();
+        $('[data-toggle="popover"]').on('click', function (e) {
+            $('[data-toggle="popover"]').not(this).popover('hide');
+        });
+    });
+</script>
+
+<script>
+
+        var data="";
+          var ans="";
+
+          function loadDoc(message) {
+
+          var xhr = new XMLHttpRequest();
+
+       data = {
+          "sender": "nitt_chat",
+          "message": message
+        }
+         
+        
+          
+          var json = JSON.stringify(data);
+
+          xhr.open("POST", "http://localhost:5005/webhooks/rest/webhook");
+          xhr.setRequestHeader("Content-Type", "application/json");
+          xhr.send(json);
+
+var prom = new Promise(function(resolve,reject) {
+          xhr.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+           //return the output from here after decoding the incoming response
+           var obj = JSON.parse(this.response);
+
+           console.log(obj[0].text);
+                resolve(obj[0].text);
+            
+            }
+          }
+    });
+
+
+      prom.then(function(res) {
+    console.log(res);
+    setter(res);
+    
+});
+         
+
+      
+        }
+
+        function setter(res)
+        {
+           ans=res;
+        }
+
+        function printer()
+        {
+          return ans;
+        }
+
+        </script>
+
+   
+    <fab-app id="fab">
+      <chat-pane id="pane">
+          <ion-toolbar slot="header" color="primary">
+            <ion-title>NITT Chat</ion-title>
+            <ion-buttons slot="primary">
+              <ion-button id="close">
+                <ion-icon slot="icon-only" name="close" />
+              </ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+         
+          <chat-message direction="incoming">
+            <p>This is a chat-bot made with ❤️ by <b> THE THINK TANK </b>!</p>           
+          </chat-message>
+          <chat-message direction="incoming">
+            <p>Ask me any doubt you have regarding NIT Trichy and I will try to assist you. !</p>
+          </chat-message>
+      </chat-pane>
+    </fab-app>
+
+
+</body>
+
+</html>

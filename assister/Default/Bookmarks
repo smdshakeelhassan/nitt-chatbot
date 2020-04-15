@@ -1,0 +1,40 @@
+{
+   "checksum": "4b7a916f902fa3d5cf2b348c3a1a2a2a",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13225663687170145",
+            "guid": "df718a19-6dc5-49ca-af39-b6359c0b31ec",
+            "id": "5",
+            "name": "nitt-chat.html",
+            "type": "url",
+            "url": "file:///home/shakeel/hackathon/nitt_chat/assister/nitt-chat.html"
+         } ],
+         "date_added": "13225663620076513",
+         "date_modified": "13225663687170145",
+         "guid": "00000000-0000-4000-A000-000000000002",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13225663620076521",
+         "date_modified": "0",
+         "guid": "00000000-0000-4000-A000-000000000003",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13225663620076522",
+         "date_modified": "0",
+         "guid": "00000000-0000-4000-A000-000000000004",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

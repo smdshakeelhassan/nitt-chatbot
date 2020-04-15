@@ -1,0 +1,138 @@
+@import "variables.scss";
+@import "common.scss";
+
+.conversation-container {
+  .header {
+    background-color: $blue-1;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 55px;
+    font-family: $roboto;
+    position: relative;
+    .avatar {
+      height: 31px;
+      width: 31px;
+      position: absolute;
+      top: 12px;
+      left: 14px;
+    }
+  }
+
+  .header.with-subtitle {
+    height: 70px;
+    .avatar {
+      top: 20px;
+    }
+    .title {
+      top:11px;
+    }
+    span {
+      bottom: 12px;
+      position: absolute;
+      left: 22px;
+      &.with-avatar {
+        left: 60px;
+      }
+    }
+  }
+
+  .title {
+    font-size: 20px;
+    margin: 0;
+    font-family: $roboto;
+    position: absolute;
+    left: 20px;
+    &.with-avatar {
+      left: 58px;
+    }
+  }
+
+  .header-buttons {
+    @include header-buttons-fs;
+  }
+
+  .close-button {
+    display: none;
+  }
+
+  .toggle-fullscreen-button {
+    @include header-button-fs;
+  }
+
+  .toggle-fullscreen {
+    @include header-icon-fs;
+  }
+
+  .loading {
+    background-color: $grey-3;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px 0 5px;
+    font-family: $roboto;
+    font-size: 14px;
+  }
+}
+
+.widget-embedded {
+  .header {
+    display: none;
+  }
+}
+
+.full-screen {
+
+  .header {
+    @include header-fs;
+  }
+
+  .title {
+    @include title-fs;
+  }
+
+  .close-button,
+  .toggle-fullscreen-button {
+    @include header-button-fs;
+  }
+
+  .close,
+  .toggle-fullscreen {
+    @include header-icon-fs;
+  }
+
+  .loading {
+    @include loading-fs;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .conversation-container {
+    .header {
+      @include header-fs;
+    }
+
+    .title {
+      @include title-fs;
+    }
+
+    .close-button {
+      @include header-button-fs;
+    }
+
+    .close {
+      @include header-icon-fs;
+    }
+
+    .toggle-fullscreen-button, .toggle-fullscreen {
+      display: none;
+    }
+
+    .loading {
+      @include loading-fs;
+    }
+  }
+}

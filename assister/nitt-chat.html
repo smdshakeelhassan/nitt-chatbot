@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script type="module" src="https://unpkg.com/@assister/chat@latest/dist/chat/chat.esm.js"></script>
+    <link href="https://unpkg.com/@assister/chat@latest/dist/chat/chat.css" rel="stylesheet">
+    <style>
+      :root {
+        /* --message-incoming-color: yellow; */
+      }
+    </style>
+    <script>
+     
+      const wait = () => new Promise(resolve => setTimeout(resolve, 500));
+      window.onload = () => {
+        const fab = document.getElementById('fab');
+        document.getElementById('close').addEventListener('click', () => fab.close());
+        const pane = document.getElementById('pane');
+        function handleIncomingMessage(event) {
+          const message = event.detail;
+          console.log(message.text);
+          loadDoc(message.text);
+          wait()
+            .then(() => message.state = 'delivered')
+            .then(wait)
+            .then(() => message.state = 'read')
+            .then(wait)
+            .then(() => pane.addIncomingMessage(printer()));
+        }
+        pane.addEventListener('incoming', handleIncomingMessage);
+      }
+    </script>
+  </head>
+  <body>
+
+		   <script>
+
+        var data="";
+          var ans="";
+
+		  function loadDoc(message) {
+
+		  var xhr = new XMLHttpRequest();
+
+       data = {
+          "sender": "nitt_chat",
+          "message": message
+        }
+         
+        
+          
+          var json = JSON.stringify(data);
+
+          xhr.open("POST", "http://localhost:5005/webhooks/rest/webhook");
+          xhr.setRequestHeader("Content-Type", "application/json");
+          xhr.send(json);
+
+var prom = new Promise(function(resolve,reject) {
+		  xhr.onreadystatechange = function() {
+		    if (this.readyState == 4 && this.status == 200) {
+           //return the output from here after decoding the incoming response
+           var obj = JSON.parse(this.response);
+
+           console.log(obj[0].text);
+		        resolve(obj[0].text);
+            
+		    }
+		  }
+    });
+
+
+      prom.then(function(res) {
+    console.log(res);
+    setter(res);
+    
+});
+         
+
+      
+        }
+
+        function setter(res)
+        {
+           ans=res;
+        }
+
+        function printer()
+        {
+          return ans;
+        }
+
+		</script>
+
+   
+    <fab-app id="fab">
+      <chat-pane id="pane">
+          <ion-toolbar slot="header" color="primary">
+            <ion-title>NITT ASSISTANT</ion-title>
+            <ion-buttons slot="primary">
+              <ion-button id="close">
+                <ion-icon slot="icon-only" name="close" />
+              </ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+         
+          <chat-message direction="incoming">
+            <p>This is a chat-bot made with ❤️ by <b> THE THINK TANK </b>!</p>           
+          </chat-message>
+          <chat-message direction="incoming">
+            <p>Ask me any doubt you have regarding NIT Trichy and I will try to assist you. !</p>
+          </chat-message>
+      </chat-pane>
+    </fab-app>
+  </body>
+</html>
