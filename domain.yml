@@ -1,0 +1,401 @@
+intents:
+  - default
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - contact_us
+  - navigate
+  - enter_data:
+      use_entities: 
+        - name
+        - destination_place
+      ignore_entities: 
+        - college
+        - purpose
+        - email
+        - question
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - bank
+  - loan
+  - reach_nittrichy
+  - books
+  - bicycle
+  - mobile_phones
+  - director
+  - documents_admission
+  - branch_change
+  - weather
+  - curfew
+  - hostel_girls
+  - atm
+  - north_indian_food
+  - laundry
+  - eateries
+  - placement
+  - sports
+  - attendance
+  - ragging
+  - hospital
+  - dress_code
+  - festember
+  - NITTFest
+  - technical_clubs
+  - technical_festival
+  - festember_teams
+  - new_labs
+  - induction_process
+  - orientation
+  - swimming_pool
+  - aayaam
+  - ecell
+  - siemens_coe
+  - scient
+  - teqip
+  - siemens_labs
+  - transfiNITT
+  - mess
+  - classes
+  - academic
+  - fees
+  - facilities
+  - pragyan
+  - day_scholar
+  - webmail
+  - result
+  - startup
+  - security
+  - software
+  - international
+  - haircut
+  - guest_house
+  - department_info
+  - library
+  - hostel
+  - academic_doc
+  - order_food
+  - about_nitt
+
+actions:
+  - navigation_form
+  - user_form
+  - utter_default
+  - utter_about_nitt
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_goodbye
+  - utter_iamabot
+  - utter_ask_person_name
+  - utter_ask_email
+  - utter_ask_college  
+  - utter_ask_purpose
+  - utter_ask_question
+  - utter_ask_destination_place
+  - utter_bank
+  - utter_loan
+  - utter_reach_nittrichy
+  - utter_books
+  - utter_bicycle
+  - utter_mobile_phones
+  - utter_director
+  - utter_documents_admission
+  - utter_branch_change
+  - utter_weather
+  - utter_curfew
+  - utter_hostel_girls
+  - utter_atm
+  - utter_north_indian_food
+  - utter_laundry
+  - utter_eateries
+  - utter_placement
+  - utter_sports
+  - utter_attendance
+  - utter_ragging
+  - utter_hospital
+  - utter_dress_code
+  - utter_festember
+  - utter_technical_clubs
+  - utter_technical_festival
+  - utter_festember_teams
+  - utter_new_labs
+  - utter_induction_process
+  - utter_orientation
+  - utter_swimming_pool
+  - utter_aayaam
+  - utter_ecell
+  - utter_siemens_coe
+  - utter_scient
+  - utter_teqip
+  - utter_siemens_labs
+  - utter_transfiNITT
+  - utter_mess
+  - utter_classes
+  - utter_academic
+  - utter_fees
+  - utter_facilities
+  - utter_pragyan
+  - utter_day_scholar
+  - utter_webmail
+  - utter_result
+  - utter_startup
+  - utter_security
+  - utter_software
+  - utter_international
+  - utter_haircut
+  - utter_guest_house
+  - utter_department_info
+  - utter_library 
+  - utter_hostel
+  - utter_academic_doc
+  - utter_order_food
+
+responses:
+  utter_default:
+    - text: "sorry, I didn't get that, can you rephrase it?"
+
+  utter_greet:
+  - text: "Hey! How you doin'? I am the NITT ChatBot. How may I assist you today?"
+
+  utter_about_nitt:
+  - text: "Please refer the link: https://www.nitt.edu/home/about/ "
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up: https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by The Think Tank."
+
+  utter_ask_person_name:
+  - text: "Okay, I will let our technical team know about your question. But I need some more information. What's your name?"
+
+  utter_ask_email:
+  - text: "Hey {person_name}, What's your email?"
+  
+  utter_ask_college:
+  - text: "What college do you go to?"
+  
+  utter_ask_purpose:
+  - text: "What's your purpose of visit? Choose between  Fest, Orientation or Counselling"
+
+  utter_ask_question:
+  - text: "What's your query?"
+
+  utter_ask_destination_place:
+  - text: "Navigation Mode has now been initialized. Please enter the destination you wish to navigate to: "
+
+  utter_bank:
+  - text: "You can open a bank account in any State Bank of India (SBI) with Core Banking facility nearby your home town and bring the SBI account number. Also, there is a SBI Branch at NIT-Trichy.Students are advised to open an account at the earliest in their native place and desist from keeping large sums of money in their hostel rooms. An ATM card may also be obtained. "
+
+  utter_loan:
+  - text: "You are eligibile for loan at SBI branch, NITT. The interest rate that the bank usually charges is around 11%. You can get a education loan in 3 weeks from your date of application. Refer the link for more details: https://www.nitt.edu/home/SBI-LOAN.pdf "
+
+  utter_reach_nittrichy:
+  - text: "NIT-Trichy is located about 22 km from Tiruchurapalli Junction / Central Bus stand on the Trichy-Thanjavur Highway. The simplest and most economical way to reach NIT-Trichy is by bus. Any city Bus at Tiruchirapalli Junction will take you to the central bus stand. Board Thanjavur bound mofussiful or route bus. The journey time from Trichy will be around 40 minutes. The executive way of reaching NIT-Trichy will be hiring a taxi. Taxis may charge around Rs.250/-.  Trichy is connected by road to Chennai (320 km) and to all major towns in South India by regular bus services. Tiruchirapalli is an important junction on the Southern Railway. It connects Chennai, Thanjavur, Madurai, Tuticorin, Tirupati, Rameswaram, Bangalore, Coimbatore, Cochin and Mangalore. It has an international airport, and is connected with Chennai (Madras), Singapore, Colombo, Kuwait, Sharjah, Calicut. Indian Airlines connects Trichy with Chennai, Sharjah, Calicut Kuwait and Colombo. Air Lanka Service connects Tiruchirapalli with Colombo."
+
+  utter_books:
+  - text: "The syllabus books shall be given in beginning of the semester. The syllabus and reference books for each subject from previous years can be found on https://www.nitt.edu/home/academics/curriculum/ . The detailed courseplan is uploaded to http://courseplan.nitt.edu by the respective faculty every semester. "
+
+  utter_bicycle:
+  - text: "Motor vehicles are not allowed within campus. So it’s better to own a bicycle, which you can buy during orientation from on-campus stalls."
+
+  utter_mobile_phones:
+  - text: "Mobile phones are permitted in the hostel, but prohibited in the academic zone."
+
+  utter_director:
+  - text: "The Director of NIT Trichy is Dr. Mini Shaji Thomas. Refer the link for other members of administration. https://www.nitt.edu/home/administration/ "
+
+  utter_documents_admission:
+  - text: "Documents required for admission: 10th marksheets, 12th marksheets, Medical certificates, Community certificate, Aadhar card, Pan card in first. Refer the link for other details: https://www.nitt.edu/home/admissions/"
+
+  utter_branch_change:
+  - text: "Unfortunately, NITT doesn't allow branch change."
+
+  utter_weather:
+  - text: "The weather is really hot in the campus. Hardly we get any rains here."
+
+  utter_curfew:
+  - text: "In first year, both the boys and girls hostels have a curfew. But girls have a permanent strict curfew. The curfew timings for girls are : 9 pm on weekdays and 9.30pm on weekends. Refer the link for more details https://www.nitt.edu/home/students/facilitiesnservices/hostelsnmess/hostels/"
+
+  utter_hostel_girls:
+  - text: "Girls hostel is called Opal Hostel. Here is a navigation to girls hostel : https://www.google.com/maps/search/{destination_place}+nit+trichy/"
+
+  utter_atm:
+  - text: "We have four ATMs in our campus - Near Barn hall , In Shopping complex, near to megamess 1, near CCD"
+
+  utter_north_indian_food:
+  - text: "Yes. Foods of various regions of the country are easily available."
+
+  utter_laundry:
+  - text: "Yes. There are 3 laundries inside the campus ( 1 in Shopping complex, 1 near megamess 1, 1 in opal hostel). There are washing machines being installed in every hostel. Also, charges for laundry services are very nominal."
+
+  utter_eateries:
+  - text: "These are some of the eateries available inside the campus - Dimora, ccd, lassi shop, coke station, classic foods, Chat khazana, food court"
+
+  utter_placement:
+  - text: "There are 350+ companies that visit the campus and all the departments have close to 100% placements, which an average salary of 8 LPA and maximum salary of 42 LPA"
+
+  utter_sports:
+  - text: "There are a lot of sports facilties available viz. NSO ground(football,cricket), Basketball court,tennis court, Volleyball court, badminton court, Table tennis, chess, carrom etc. Hostels have table tennis and carrom. There's one common Gym in the sports center. For more detailed information visit: https://www.nitt.edu/home/students/facilitiesnservices/sportscenter/ "
+
+  utter_attendance:
+  - text: "A minimum of 75% attendace has to be maintained."
+
+  utter_ragging:
+  - text: "NIT Trichy has zero tolerance for ragging. In case of any issue, contact the anti-ragging helpline 9486001180. Refer the link for more details https://www.nitt.edu/home/academics/anti_ragging/ "
+
+  utter_hospital:
+  - text: "There is a hospital within campus, with doctors available 24*7. All students are provided with medical insurance and tie ups with Apollo and BHEl Hospitals in case of serious illness. An ambulance is always available in case of emergencies. Helpline Number: 0431-2503860 (Hospital) and 9486001162 (Ambulance)."
+
+  utter_dress_code:
+  - text: "Students are expected to wear collared tshrirts/shirts and full length pants to the academic blocks."
+
+  utter_festember:
+  - text: "FESTEMBER. It is the annual cultural festival of the National Institute of Technology, Tiruchirappalli. It is a 4-day event held annually in the third week of September. It offers a variety of cultural events, workshops, informals and proshows. It has an annual participant strength of more than 15,000 students from over 500 colleges across India. Refer: https://festember.com/"
+
+  utter_NITTFest:
+  - text: "NITTFest is the annual Inter-Departmental Fest of NIT TRICHY, where all departments across the institute compete on a lot of events. It is usually conducted in March. Refer: https://www.nittfest.in/"
+
+  utter_technical_clubs:
+  - text: "Spider, RMI, Delta, PSI, etc are some of the technical clubs of NITT. Sigma, 180 degree, Atheneum are some of the new clubs founded in the last year. They hold their induction process for first years every year. Check hostel signboards and WhatsApp Groups regularly!!"
+
+  utter_technical_festival:
+  - text: "Pragyan, NIT Trichy is the technical festival of the National Institute of Technology, Tiruchirappalli. Since its inception in 2005, it has been held every year over a period of three and a half days during the months of January, February or March"
+
+  utter_festember_teams:
+  - text: "Marketing, Workshops, Media Relations, Social Responsibility, Events, Quality Assurance, PR & Hospitality, Organising Committee, Guest Lectures, Infotainment"
+
+  utter_new_labs:
+  - text: "Siemens COE, IOT LAB, ISRO Lab, Robotics Lab, etc"
+
+  utter_induction_process:
+  - text: "Group DIscussion followed by some given tasks followed by couples of personal interviews."
+
+  utter_orientation:
+  - text: "The Orientation Program helps the newcomers to live through this period of college life by introducing them to the new lifestyle and environment. It is a 15 to 19 days long programme for freshers. For mentorship contact the peer supporters available on this page: https://www.nitt.edu/home/students/orientation/ "
+
+  utter_swimming_pool:
+  - text : "Our Institute is endowed with a beautiful swimming pool of length 25 metres. It caters to the students, faculty, and other residents of the campus. The swimming pool has three parts. There is a very shallow pool for kids. There is a wading pool for the learners and A deeper pool with a maximum depth of 8 feet is available for the more experienced swimmers and to those who train for competitions. The registration charge for 6 months is Rs 1000. Please refer this link for more information on how to register: https://www.nitt.edu/home/students/facilitiesnservices/sportscenter/swimmingpool/ "
+
+  utter_aayaam:
+  - text: "Aayaam is the Hindi Literary and Cultural Society of National Institute of Technology Tiruchirappalli. The idea of having such a forum was conceived by Hemant Kumar, Anirudh Roy and Rahul Gadewadikar. This portal was primarily dedicated to the people who were willing to contribute towards Hindi Literature. This literary group was the first of its kind in Tamil Nadu and the whole of South India, where Hindi is not widely spoken. The motive behind establishing Aayaam was to promote the love for Hindi in Trichy in general and NIT Trichy in particular. "
+ 
+  utter_ecell:
+  - text: "The E-Cell of NIT Trichy is a student run Non-profit organization which has been fostering innovation and entrepreneurship in India among students for more than decade. Ventura, Conclave, E-Summit are some of the popular events conducted by ecell of nit trichy."
+
+  utter_siemens_coe:
+  - text: "The Siemens CoE in Manufacturing, established in 2018 at National Institute of Technology, Tiruchirappalli, operates with a primary focus of creating a robust technical education eco-system through its experience in industrial products and services."
+
+  utter_scient:
+  - text: "SCIEnT is a multi-disciplinary innovation centre, providing opportunities to students to delve into the ever expanding world of technology, and discover, hands on, the incredible scope for innovation that the world offers today. Please refer: https://scient.nitt.edu/ "
+
+  utter_teqip:
+  - text: "TEQIP is a World Bank assisted Project to improve the quality of technical education system in the country. They even funded our GATE Materials and online test series of GATE for final year students.Visit https://www.nitt.edu/home/icsr/teqip/ for more details "
+
+  utter_siemens_labs:
+  - text: "There are 12 sophisticated Laboratories for Design and Validation, Advanced Manufacturing, Test and Optimization, Automation, Electrical and Energy savings, Process Instrumentation, Mechatronics, CNC Machines, CNC Controller, Robotics, Rapid Prototyping and Internet of Things which provides opportunity for promising innovations."
+
+  utter_transfiNITT:
+  - text: "It is an 36 hour continuous intra- NITT hackathon among the different teams of NITT, having a cash prize of 1.3 lakhs."
+  
+  utter_mess:
+  - text: "NIT Trichy has many different messes with different Indian Cuisines viz. Andhra Mess, North Indian Mess, South Indian Mess and Kerala Mess. Each mess offers veg and non-veg dining options. Mess timings are Breakfast:7 to 10, Lunch: 12 to 2.30, Snacks: 4.30 to 5.30, Dinner: 7 to 9.30. There is also a pure veg mess for Jain Food. You also have the option to dine at food courts, which are flexible in timings and menu like other eateries on campus."
+
+  utter_classes:
+  - text: "Classes are conducted at Orion or LHC depending on your department. Classes generally start by 8.30 in the Morning and go on till 5 in the evening. You have a lunch break from 12.10 to 1.30. The lectures go for a period of 50 mins. You might have labs in the morning or afternoon session which take up around 3 hrs. The detailed time table is given at the beginning of each semester by your respective departments."
+  
+  utter_academic:
+  - text: "Refer the link for your query or any other academics related query: https://www.nitt.edu/home/academics/rules/BTech_Regulations_2019.pdf"
+
+  utter_fees:
+  - text: "The fee structure is revised every year. The one for previous years can be found at https://www.nitt.edu/home/academics/fee_details/ . The payment method can also be found in the documents in the given link. For scholarship options refer https://www.nitt.edu/home/academics/scholarships/ . For loan options refer https://www.nitt.edu/home/SBI-LOAN.pdf "
+
+  utter_facilities:
+  - text: "The campus offers a lot of facilities in terms of campus-life. It is a mini town in itself with a dedicated shopping center which caters to all the basic needs from grocery to stationery. We also have a mini supermarket to meet the daily needs. We have Naturals Salon and CCD on campus which offers products at subsidised rates. Refer to the link for more details https://www.nitt.edu/home/students/facilitiesnservices/ "
+
+  utter_pragyan:
+  - text: "Pragyan, NIT Trichy is the technical festival of the National Institute of Technology, Tiruchirappalli. Since its inception in 2005, it has been held every year over a period of three and a half days during the months of January, February or March. Every year, participants from a number of colleges across the country take part in various events conducted as a part of Pragyan, making it one of the largest techno-managerial fests in India. It is also the first student-run organisation in the world and the third overall, next only to the London Olympics and Manchester United to get an ISO 20121:2012 certification for Sustainable Event Management. It also holds the ISO 9001:2015 certification for Quality Management Systems. Refer link for more details: https://www.pragyan.org/ "
+
+  utter_day_scholar:
+  - text: "You can be a day scholar and commute everyday to the campus. Day scholars are allowed motor vehicles but they have to be parked at the institute gate."
+
+  utter_webmail:
+  - text: "NIT Trichy has its own webmail, which can be accessed at webmail.nitt.edu . The same can be used to mail professors and to sign up for other software benefits."
+
+  utter_result:
+  - text: "The results once announced, are available on the intranet portal at http://misnew.nitt.edu/NITTSTUDENT. You can use the portal for cehccking results, making complaints, and few other services."
+
+  utter_startup:
+  - text: "CEDI enables young entrepreneurs to initiate technology start-up companies for commercial exploration of technologies developed by them in the areas of ICT and Electronics. Visit http://www.nitt-cedi.in/ for more details."
+
+  utter_security:
+  - text: "The Security department comprises the Security Officer , three Sergeants and 41 security guards. The guards are divided into three sections and allotted duties round the clock in three shifts on rotation basis. One Sergeant is posted in each shift to supervise the security guards. Most of the security guards are retired defense service personnel. Their supreme duty is to look after the assets of the Institution besides maintaining law and order on the campus. Girls also have curfew after 9 PM for security puposes. Security Helpline: 9486001153"
+
+  utter_software:
+  - text: "NIT Trichy has license for many softwares, which students can avail by using their webmail ID and others which can be directly downloaded from the intranet at ruby.nitt.edu . Students get access to research papers through the intranet. "
+
+  utter_international:
+  - text: "There are lot of MoUs and Opportunities for NIT Trichy students to work or study in other colleges. The Office of International Relations intends to develop and coordinate the international activities of the faculty and students of NIT Trichy. Visit oir.nitt.edu for more details. "
+
+  utter_haircut:
+  - text: "There is a salon in Shopping Complex for Boys. Apart from that we have a unisex salon (Naturals), which offers a variety of services such as haircut, facial, makeup, hair styling, spa."
+
+  utter_guest_house:
+  - text: "You can book the guest house by filling the form and getting required signatures, which can then be submitted at Guest House Reception. The form can be downloaded from http://ruby.nitt.edu/GH-Forms-CAT-II,III,IV.pdf "
+  
+  utter_department_info:
+  - text: "All the details pertaining to your department can be found at https://www.nitt.edu/home/academics/departments/"
+  
+  utter_library:
+  - text: "Visit https://www.nitt.edu/home/students/facilitiesnservices/library/ for all queries related to library."
+  
+  utter_hostel:
+  - text: "All the hostel details can be founf at https://www.nitt.edu/home/students/facilitiesnservices/hostelsnmess/hostels/ "
+  
+  utter_academic_doc:
+  - text: "You can download the form corresponding to your need, get the required signatures, pay the required fee through SBI collect, and submit the filled form along with payment receipt in the Academic Office in Admin Block (First Floor). The forms can be downloaded from https://www.nitt.edu/home/academics/formats/ "
+  
+  utter_order_food:
+  - text: "Certain restaurants in and around trichy have delivery through Swiggy and Zomato. Feenix is another delivery service which can be used through WhatsApp (8940554111). You can order food from restaurants not available in Zomato and Swiggy through Feenix. You can get birthday cakes from Cafe Cakebee by ordering them one day prior to birthday at 2k Market or CCD in last moment cases."
+  
+forms:
+  - user_forms
+  - navigation_forms
+
+entities:
+  - name
+  - college
+  - purpose
+  - email
+  - question
+  - destination_place
+
+slots:
+  person_name:
+    type: unfeaturized
+  college:
+    type: unfeaturized
+  purpose:
+    type: unfeaturized
+  email:
+    type: unfeaturized
+  question:
+    type: unfeaturized
+  destination_place:
+    type: unfeaturized
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
